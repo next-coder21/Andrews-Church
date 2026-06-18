@@ -4,7 +4,7 @@ import { jwtVerify } from 'jose'
 const secret = new TextEncoder().encode(process.env.SESSION_SECRET)
 const COOKIE = 'admin_session'
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
   if (pathname === '/admin/login') return NextResponse.next()
