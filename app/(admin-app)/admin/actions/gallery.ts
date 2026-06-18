@@ -8,11 +8,11 @@ interface GalleryItem {
   id: number; filename: string; caption: string; captionTa: string; uploadedAt: string;
 }
 
-export async function uploadPhoto(formData: FormData): Promise<void> {
+export async function uploadPhoto(formData: FormData): Promise<{ error: string } | void> {
   const file = formData.get('photo') as File
-  if (!file || file.size === 0) return
-  if (!file.type.startsWith('image/')) return
-  if (file.size > 5 * 1024 * 1024) return
+  if (!file || file.size === 0) return { error: 'No file selected' }
+  if (!file.type.startsWith('image/')) return { error: 'File must be an image' }
+  if (file.size > 5 * 1024 * 1024) return { error: 'File must be under 5MB' }
 
   const filename = await saveUploadedImage(file, 1200)
   const items = await readData<GalleryItem[]>('gallery')
