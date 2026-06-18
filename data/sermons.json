@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "titleTa": "விசுவாசத்தில் நடத்தல்",
+    "title": "Walking in Faith",
+    "speaker": "Rev. John Samuel",
+    "speakerTa": "போதகர் ஜான் சாமுவேல்",
+    "date": "15 யூன் 2026",
+    "series": "விசுவாசத்தின் அடிப்படைகள்",
+    "seriesTa": "விசுவாசத்தின் அடிப்படைகள்",
+    "descTa": "வாழ்க்கையின் ஒவ்வொரு பருவத்திலும் தேவன் மீது நம்பிக்கை வைப்பது என்றால் என்னவென்று ஆராய்வோம்.",
+    "description": "Exploring what it means to trust God in every season of life, even when the path is unclear."
+  },
+  {
+    "id": 2,
+    "titleTa": "ஜெபத்தின் வல்லமை",
+    "title": "The Power of Prayer",
+    "speaker": "Rev. John Samuel",
+    "speakerTa": "போதகர் ஜான் சாமுவேல்",
+    "date": "8 யூன் 2026",
+    "series": "விசுவாசத்தின் அடிப்படைகள்",
+    "seriesTa": "விசுவாசத்தின் அடிப்படைகள்",
+    "descTa": "ஜெபம் நம்முடைய இருதயங்களை மாற்றி தேவனுடன் நமது உறவை ஆழப்படுத்துகிறது.",
+    "description": "Discovering how prayer transforms our hearts and deepens our relationship with God."
+  },
+  {
+    "id": 3,
+    "titleTa": "மீட்டெடுக்கும் கிருபை",
+    "title": "Grace That Restores",
+    "speaker": "Deacon Thomas Raj",
+    "speakerTa": "டீக்கன் தாமஸ் ராஜ்",
+    "date": "1 யூன் 2026",
+    "series": "வாழும் நற்செய்தி",
+    "seriesTa": "வாழும் நற்செய்தி",
+    "descTa": "தேவனுடைய கிருபை நம்மை முழுமையாக மீட்டெடுக்கிறது.",
+    "description": "How God's grace meets us in our brokenness and restores us to wholeness."
+  },
+  {
+    "id": 4,
+    "titleTa": "உன் அண்டகாரனை நேசி",
+    "title": "Love Your Neighbour",
+    "speaker": "Rev. John Samuel",
+    "speakerTa": "போதகர் ஜான் சாமுவேல்",
+    "date": "25 மே 2026",
+    "series": "வாழும் நற்செய்தி",
+    "seriesTa": "வாழும் நற்செய்தி",
+    "descTa": "கிறிஸ்துவின் அன்பை நாம் அன்றாட வாழ்வில் எவ்வாறு வெளிப்படுத்துவது.",
+    "description": "A practical look at how we can embody Christ's love in our everyday interactions."
+  }
+]
