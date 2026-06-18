@@ -1,0 +1,67 @@
+export interface ChurchEvent {
+  id: number;
+  titleTa: string;
+  title: string;
+  date: string;
+  time: string;
+  descTa: string;
+  description: string;
+}
+
+export const events: ChurchEvent[] = [
+  {
+    id: 1,
+    titleTa: "ஞாயிறு தமிழ் வழிபாடு",
+    title: "Sunday Tamil Worship",
+    date: "ஒவ்வொரு ஞாயிறு",
+    time: "காலை 8:30 மணி",
+    descTa:
+      "கூடங்குளம் திருச்சபை குடும்பத்துடன் இணைந்து ஆராதனை செய்யுங்கள். புகழ், வழிபாடு மற்றும் வார்த்தை ஊழியம்.",
+    description:
+      "Join the Koodankulam church family for worship, praise, and the ministry of the Word.",
+  },
+  {
+    id: 2,
+    titleTa: "இளைஞர் கூட்டம்",
+    title: "Youth Fellowship",
+    date: "ஒவ்வொரு வெள்ளி",
+    time: "மாலை 6:00 மணி",
+    descTa:
+      "இளைஞர்களுக்கான உற்சாக கூட்டம் — விசுவாசத்தில் வளர, நட்பு கொள்ள மற்றும் ஒன்றாக சேவை செய்ய.",
+    description:
+      "A vibrant gathering for youth to grow in faith, build friendships, and serve together.",
+  },
+  {
+    id: 3,
+    titleTa: "வேதாகம வகுப்பு",
+    title: "Bible Study",
+    date: "ஒவ்வொரு புதன்",
+    time: "மாலை 7:00 மணி",
+    descTa:
+      "ஆழமான வேத அறிவிற்காக சிறு குழுவாக கூடி தேவ வார்த்தையை ஆராய்வோம்.",
+    description:
+      "Dig deeper into God's Word together in a welcoming small-group setting.",
+  },
+  {
+    id: 4,
+    titleTa: "சமூக சேவை நாள்",
+    title: "Community Outreach",
+    date: "மாதம் முதல் சனி",
+    time: "காலை 9:00 மணி",
+    descTa:
+      "கூடங்குளம் சமூகத்திற்கு அன்போடு சேவை செய்கிறோம் — உணவு விநியோகம், வீட்டு வருகை மற்றும் ஆசீர்வாத நடவடிக்கைகள்.",
+    description:
+      "Serving the Koodankulam community with love through food distribution, home visits, and acts of blessing.",
+  },
+  {
+    id: 5,
+    titleTa: "குழந்தைகள் ஞாயிறு பள்ளி",
+    title: "Children's Sunday School",
+    date: "ஒவ்வொரு ஞாயிறு",
+    time: "காலை 8:30 மணி",
+    descTa:
+      "குழந்தைகளுக்காக வயதுக்கேற்ற வேத பாடங்கள், பாடல்கள் மற்றும் கைவேலை நடவடிக்கைகள்.",
+    description:
+      "Age-appropriate Bible lessons, songs, and crafts for children during the Sunday service.",
+  },
+];

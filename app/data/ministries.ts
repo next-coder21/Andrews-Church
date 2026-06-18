@@ -1,0 +1,92 @@
+export interface Ministry {
+  id: number;
+  nameTa: string;
+  name: string;
+  leader: string;
+  leaderTa: string;
+  schedule: string;
+  scheduleTa: string;
+  descTa: string;
+  description: string;
+}
+
+export const ministries: Ministry[] = [
+  {
+    id: 1,
+    nameTa: "இளைஞர் ஊழியம்",
+    name: "Youth Ministry",
+    leader: "Bro. David & Sis. Priya",
+    leaderTa: "சகோ. டேவிட் & சகோ. பிரியா",
+    schedule: "Every Friday 6:00 PM",
+    scheduleTa: "ஒவ்வொரு வெள்ளி மாலை 6:00",
+    descTa:
+      "இளைஞர்களுக்கான ஜீவனுள்ள இடம் — வேதாகம படிப்பு, ஆராதனை, மற்றும் சமூக சேவை மூலம் தேவனோடு வளர்கிறோம்.",
+    description:
+      "A living space for youth to grow with God through Bible study, worship, and community service.",
+  },
+  {
+    id: 2,
+    nameTa: "பெண்கள் ஐக்கியம்",
+    name: "Women's Fellowship",
+    leader: "Sis. Mercy Samuel",
+    leaderTa: "சகோ. மெர்சி சாமுவேல்",
+    schedule: "2nd & 4th Saturday 10:00 AM",
+    scheduleTa: "2-வது & 4-வது சனி காலை 10:00",
+    descTa:
+      "பெண்கள் ஒன்றாக ஜெபிக்கிறோம், வேதம் படிக்கிறோம், ஒருவரையொருவர் ஆதரிக்கிறோம்.",
+    description:
+      "Women praying, studying Scripture, and supporting one another in a safe, nurturing space.",
+  },
+  {
+    id: 3,
+    nameTa: "ஆண்கள் சங்கம்",
+    name: "Men's Brotherhood",
+    leader: "Bro. Rajesh Thomas",
+    leaderTa: "சகோ. ராஜேஷ் தாமஸ்",
+    schedule: "1st & 3rd Saturday 7:00 AM",
+    scheduleTa: "1-வது & 3-வது சனி காலை 7:00",
+    descTa:
+      "வேத வழியில் நடக்கும் ஆண்களாக — குடும்பத்திற்கும் சமூகத்திற்கும் பொறுப்பான தலைவர்களாக வளர்கிறோம்.",
+    description:
+      "Growing as men who walk in Scripture — responsible leaders for family and community.",
+  },
+  {
+    id: 4,
+    nameTa: "இசை & ஆராதனை ஊழியம்",
+    name: "Music & Worship Ministry",
+    leader: "Sis. Grace Emmanuel",
+    leaderTa: "சகோ. கிரேஸ் இம்மானுவேல்",
+    schedule: "Thursday 5:30 PM Rehearsal",
+    scheduleTa: "வியாழன் மாலை 5:30 பயிற்சி",
+    descTa:
+      "தமிழ் கீர்த்தனைகள் மற்றும் ஆராதனை பாடல்கள் மூலம் தேவனை மகிமைப்படுத்துகிறோம். அனைவரும் வரவேற்கப்படுகிறீர்கள்.",
+    description:
+      "Glorifying God through Tamil hymns and worship songs. All singers and instrumentalists welcome.",
+  },
+  {
+    id: 5,
+    nameTa: "குழந்தைகள் ஊழியம்",
+    name: "Children's Ministry",
+    leader: "Sis. Anita & Bro. Suresh",
+    leaderTa: "சகோ. அனிதா & சகோ. சுரேஷ்",
+    schedule: "Every Sunday during service",
+    scheduleTa: "ஒவ்வொரு ஞாயிறு வழிபாடு நேரத்தில்",
+    descTa:
+      "அடுத்த தலைமுறையை தேவ அன்பில் வளர்க்கிறோம் — வயதுக்கேற்ற வேத பாடங்கள், பாடல்கள் மற்றும் கைவேலை.",
+    description:
+      "Raising the next generation in God's love with age-appropriate Bible lessons, songs, and crafts.",
+  },
+  {
+    id: 6,
+    nameTa: "சமூக சேவை ஊழியம்",
+    name: "Community Outreach",
+    leader: "Deacon Thomas Raj",
+    leaderTa: "டீக்கன் தாமஸ் ராஜ்",
+    schedule: "1st Saturday of each month",
+    scheduleTa: "மாதம் முதல் சனி",
+    descTa:
+      "கூடங்குளம் மற்றும் சுற்றுப்புற கிராமங்களுக்கு உணவு, ஆடை மற்றும் அன்பு சேவை வழங்குகிறோம்.",
+    description:
+      "Providing food, clothing, and loving service to Koodankulam and surrounding villages.",
+  },
+];
