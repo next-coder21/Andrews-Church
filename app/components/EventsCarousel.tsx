@@ -3,10 +3,14 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { events } from "../data/events";
 import { useLanguage } from "../context/LanguageContext";
 
-export default function EventsCarousel() {
+interface ChurchEvent {
+  id: number; titleTa: string; title: string;
+  date: string; time: string; descTa: string; description: string;
+}
+
+export default function EventsCarousel({ events }: { events: ChurchEvent[] }) {
   const [[current, dir], setCurrent] = useState([0, 0]);
   const { lang, t } = useLanguage();
 

@@ -3,10 +3,14 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
+interface Scripture {
+  verseTa: string; verse: string; referenceTa: string; reference: string;
+}
+
 const vp = { once: false, amount: 0.25 };
 
-export default function YearVerseSection() {
-  const { lang, t } = useLanguage();
+export default function YearVerseSection({ scripture }: { scripture: Scripture }) {
+  const { lang } = useLanguage();
 
   return (
     <section className="bg-white px-4 sm:px-6 lg:px-10 py-16 sm:py-24">
@@ -20,7 +24,7 @@ export default function YearVerseSection() {
           viewport={vp}
           transition={{ duration: 0.5 }}
         >
-          {t("இந்த ஆண்டின் வேத வசனம்", "Verse of the Year")}
+          {lang === "ta" ? "இந்த ஆண்டின் வேத வசனம்" : "Verse of the Year"}
         </motion.p>
 
         {/* year badge — slides from left */}
@@ -38,47 +42,27 @@ export default function YearVerseSection() {
         </motion.div>
 
         {/* quote — scales in */}
-        {lang === "ta" ? (
-          <motion.blockquote
-            className="font-bamini text-navy leading-relaxed mb-5"
-            style={{ fontSize: "clamp(20px, 3.2vw, 36px)", lineHeight: 1.8 }}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={vp}
-            transition={{ duration: 0.8, delay: 0.15 }}
-          >
-            &ldquo;இதோ, நான் புதிய காரியம் செய்கிறேன்; இப்பொழுது அது தோன்றும், நீங்கள் அதை அறியீர்களா? நான் வனாந்தரத்திலே ஒரு வழியையும், மறுபாலைநிலத்திலே ஆறுகளையும் உண்டாக்குவேன்.&rdquo;
-          </motion.blockquote>
-        ) : (
-          <motion.blockquote
-            className="text-navy font-medium leading-relaxed mb-5 italic"
-            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(20px, 3.2vw, 38px)", lineHeight: 1.65 }}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={vp}
-            transition={{ duration: 0.8, delay: 0.15 }}
-          >
-            &ldquo;See, I am doing a new thing! Now it springs up; do you not perceive it? I am making a way in the wilderness and streams in the wasteland.&rdquo;
-          </motion.blockquote>
-        )}
+        <motion.blockquote
+          className={`text-navy font-medium leading-relaxed mb-5 ${lang === "ta" ? "font-tamil" : "italic"}`}
+          style={{ fontFamily: lang === "ta" ? undefined : "var(--font-display)", fontSize: "clamp(20px, 3.2vw, 38px)", lineHeight: 1.65 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={vp}
+          transition={{ duration: 0.8, delay: 0.15 }}
+        >
+          &ldquo;{lang === "ta" ? scripture.verseTa : scripture.verse}&rdquo;
+        </motion.blockquote>
 
         {/* secondary text — slides from right */}
         <motion.p
           className={`mb-6 text-slate-400 ${lang === "ta" ? "italic" : "font-bamini"}`}
-          style={{
-            fontFamily: lang === "ta" ? "var(--font-display)" : undefined,
-            fontSize: "clamp(13px, 1.6vw, 18px)",
-            lineHeight: 1.8,
-          }}
+          style={{ fontFamily: lang === "ta" ? "var(--font-display)" : undefined, fontSize: "clamp(13px, 1.6vw, 18px)", lineHeight: 1.8 }}
           initial={{ opacity: 0, x: 24 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={vp}
           transition={{ duration: 0.55, delay: 0.3 }}
         >
-          {lang === "ta"
-            ? <>&ldquo;See, I am doing a new thing! Now it springs up; do you not perceive it?&rdquo;</>
-            : <>&ldquo;இதோ, நான் புதிய காரியம் செய்கிறேன்; இப்பொழுது அது தோன்றும்…&rdquo;</>
-          }
+          &ldquo;{lang === "ta" ? scripture.verse : scripture.verseTa}&rdquo;
         </motion.p>
 
         {/* reference — fades up */}
@@ -89,7 +73,9 @@ export default function YearVerseSection() {
           viewport={vp}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          {lang === "ta" ? "ஏசாயா 43:19 · Isaiah 43:19" : "Isaiah 43:19 · ஏசாயா 43:19"}
+          {lang === "ta"
+            ? `${scripture.referenceTa} · ${scripture.reference}`
+            : `${scripture.reference} · ${scripture.referenceTa}`}
         </motion.cite>
       </div>
     </section>
