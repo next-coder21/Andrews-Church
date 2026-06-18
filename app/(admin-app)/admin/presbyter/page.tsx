@@ -18,7 +18,7 @@ export default async function AdminPresbyterPage() {
             <Image src={`/uploads/${p.photo}`} alt={p.name} width={120} height={120} className="rounded-full object-cover w-24 h-24" />
           </div>
         )}
-        <form action={updatePresbyterInfo} className="grid grid-cols-1 sm:grid-cols-2 gap-3" encType="multipart/form-data">
+        <form action={updatePresbyterInfo} className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <input name="name" defaultValue={p.name} placeholder="Name (English)" required className="border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-cerulean" />
           <input name="nameTa" defaultValue={p.nameTa} placeholder="Name (Tamil)" required className="border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-cerulean" />
           <input name="title" defaultValue={p.title} placeholder="Title (English)" required className="border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-cerulean" />

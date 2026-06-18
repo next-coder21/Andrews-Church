@@ -13,7 +13,7 @@ export default async function AdminCommitteePage() {
       <h1 className="text-xl font-bold text-navy mb-6">Church Committee</h1>
       <div className="bg-white border border-slate-200 rounded-xl p-5 mb-6">
         <h2 className="text-sm font-semibold text-slate-700 mb-4">Add Member</h2>
-        <form action={addMember} className="grid grid-cols-1 sm:grid-cols-2 gap-3" encType="multipart/form-data">
+        <form action={addMember} className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <input name="name" placeholder="Name (English)" required className="border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-cerulean" />
           <input name="nameTa" placeholder="Name (Tamil)" required className="border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-cerulean" />
           <input name="role" placeholder="Role (English)" required className="border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-cerulean" />
@@ -39,7 +39,7 @@ export default async function AdminCommitteePage() {
               <span className="text-xs text-slate-400 flex-shrink-0">Edit ▾</span>
             </summary>
             <div className="px-5 pb-5 border-t border-slate-100 pt-4 space-y-3">
-              <form action={updateMember} className="grid grid-cols-1 sm:grid-cols-2 gap-3" encType="multipart/form-data">
+              <form action={updateMember} className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <input type="hidden" name="id" value={m.id} />
                 <input name="name" defaultValue={m.name} placeholder="Name (English)" required className="border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-cerulean" />
                 <input name="nameTa" defaultValue={m.nameTa} placeholder="Name (Tamil)" required className="border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-cerulean" />

@@ -13,7 +13,7 @@ export default async function AdminGalleryPage() {
       <h1 className="text-xl font-bold text-navy mb-6">Gallery</h1>
       <div className="bg-white border border-slate-200 rounded-xl p-5 mb-6">
         <h2 className="text-sm font-semibold text-slate-700 mb-4">Upload Photo</h2>
-        <form action={uploadPhoto as any} className="grid grid-cols-1 sm:grid-cols-2 gap-3" encType="multipart/form-data">
+        <form action={uploadPhoto as any} className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <input name="photo" type="file" accept="image/*" required className="sm:col-span-2 border border-slate-200 rounded-lg px-3 py-2 text-sm file:mr-3 file:bg-cerulean file:text-white file:rounded file:border-0 file:px-3 file:py-1 file:text-sm" />
           <input name="captionTa" placeholder="Caption (Tamil)" className="border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-cerulean" />
           <input name="caption" placeholder="Caption (English)" className="border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-cerulean" />
