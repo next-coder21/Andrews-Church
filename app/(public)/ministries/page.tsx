@@ -1,7 +1,7 @@
 "use client";
 
-import { ministries } from "../data/ministries";
-import { useLanguage } from "../context/LanguageContext";
+import { ministries } from "../../data/ministries";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function MinistriesPage() {
   const { lang, t } = useLanguage();

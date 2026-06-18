@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, DM_Sans, Noto_Sans_Tamil } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import MobileBottomNav from "./components/MobileBottomNav";
 import { LanguageProvider } from "./context/LanguageContext";
 
 const cormorant = Cormorant_Garamond({
@@ -42,12 +39,7 @@ export default function RootLayout({
       className={`${cormorant.variable} ${dmSans.variable} ${notoTamil.variable} h-full`}
     >
       <body className="min-h-full flex flex-col bg-white text-navy">
-        <LanguageProvider>
-          <Navbar />
-          <main className="flex-1 pt-16 pb-16 md:pb-0">{children}</main>
-          <Footer />
-          <MobileBottomNav />
-        </LanguageProvider>
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

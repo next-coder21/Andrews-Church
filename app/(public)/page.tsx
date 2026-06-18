@@ -1,9 +1,9 @@
-import HeroSection from "./components/HeroSection";
-import ScriptureSection from "./components/ScriptureSection";
-import YearVerseSection from "./components/YearVerseSection";
-import ValuesSection from "./components/ValuesSection";
-import EventsCarousel from "./components/EventsCarousel";
-import WaveDivider from "./components/WaveDivider";
+import HeroSection from "../components/HeroSection";
+import ScriptureSection from "../components/ScriptureSection";
+import YearVerseSection from "../components/YearVerseSection";
+import ValuesSection from "../components/ValuesSection";
+import EventsCarousel from "../components/EventsCarousel";
+import WaveDivider from "../components/WaveDivider";
 
 export default function Home() {
   return (

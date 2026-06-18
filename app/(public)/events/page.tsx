@@ -1,7 +1,7 @@
 "use client";
 
-import { events } from "../data/events";
-import { useLanguage } from "../context/LanguageContext";
+import { events } from "../../data/events";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function EventsPage() {
   const { lang, t } = useLanguage();

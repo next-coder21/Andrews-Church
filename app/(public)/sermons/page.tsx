@@ -1,7 +1,7 @@
 "use client";
 
-import { sermons } from "../data/sermons";
-import { useLanguage } from "../context/LanguageContext";
+import { sermons } from "../../data/sermons";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function SermonsPage() {
   const { lang, t } = useLanguage();

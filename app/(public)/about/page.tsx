@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useLanguage } from "../context/LanguageContext";
-import WaveDivider from "../components/WaveDivider";
+import { useLanguage } from "../../context/LanguageContext";
+import WaveDivider from "../../components/WaveDivider";
 
 const vp = { once: false, amount: 0.2 };
 
